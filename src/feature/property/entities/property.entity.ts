@@ -11,7 +11,7 @@ import {
 import { Point } from 'geojson';
 import { Unit } from '../../unit/entities/unit.entity';
 import { PropertyType } from '../enum/unit-type.enum';
-import { LeasedProperties } from '../../tenant/entities/leased-properties.entity';
+import { LeasedProperties } from '../../leased_properties/entities/leased-properties.entity';
 
 @Entity()
 export class Property {

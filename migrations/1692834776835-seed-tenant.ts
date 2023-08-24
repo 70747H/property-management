@@ -8,13 +8,11 @@ export class SeedTenant1692834776835 implements MigrationInterface {
         id: 1,
         name: 'Ali',
         contact_details: '+9565544512',
-        properties: [{ id: 1 }],
       }),
       queryRunner.manager.create<Tenant>(Tenant, {
         id: 2,
         name: 'Alan',
         contact_details: '+9575544513',
-        properties: [{ id: 2 }],
       }),
     ]);
   }

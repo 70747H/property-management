@@ -8,7 +8,7 @@ import { UpdatePropertyDto } from './dto/update-property.dto';
 
 describe('PropertyService', () => {
   let service: PropertyService;
-  let propertyRepository: Repository<Property>;
+  let propertyRepository: jest.Mocked<Repository<Property>>;
   let unitRepository: jest.Mocked<Repository<Unit>>;
 
   beforeEach(async () => {

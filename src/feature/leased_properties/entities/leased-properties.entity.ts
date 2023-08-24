@@ -5,7 +5,7 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Tenant } from './tenant.entity';
+import { Tenant } from '../../tenant/entities/tenant.entity';
 import { Property } from '../../property/entities/property.entity';
 
 @Entity('leased_properties')

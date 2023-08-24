@@ -5,12 +5,13 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   DeleteDateColumn,
-  OneToMany,
+  ManyToMany,
+  JoinTable,
 } from 'typeorm';
-import { LeasedProperties } from '../../leased_properties/entities/leased-properties.entity';
+import { Property } from '../../property/entities/property.entity';
 
 @Entity()
-export class Tenant {
+export class Landlord {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -20,11 +21,9 @@ export class Tenant {
   @Column()
   contact_details: string;
 
-  @OneToMany(
-    () => LeasedProperties,
-    (leasedProperties) => leasedProperties.tenant,
-  )
-  leased_properties: LeasedProperties[];
+  @ManyToMany(() => Property)
+  @JoinTable({ name: 'landlord_properties' })
+  properties: Property[];
 
   @CreateDateColumn()
   public created_at: Date;

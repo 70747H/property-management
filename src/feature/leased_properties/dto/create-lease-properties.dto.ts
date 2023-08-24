@@ -4,6 +4,10 @@ import { IsDateString, IsNotEmpty, IsNumber } from 'class-validator';
 export class CreateLeasedPropertiesDto {
   @IsNotEmpty()
   @IsNumber()
+  landlord_id: number;
+
+  @IsNotEmpty()
+  @IsNumber()
   tenant_id: number;
 
   @IsNotEmpty()

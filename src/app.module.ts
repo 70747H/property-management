@@ -9,6 +9,8 @@ import { validate } from './config/env.validation';
 import { PropertyModule } from './feature/property/property.module';
 import { TenantModule } from './feature/tenant/tenant.module';
 import { UnitModule } from './feature/unit/unit.module';
+import { LandlordModule } from './feature/landlord/landlord.module';
+import { LeasedPropertiesModule } from './feature/leased_properties/leased_properties.module';
 
 @Module({
   imports: [
@@ -27,6 +29,8 @@ import { UnitModule } from './feature/unit/unit.module';
     PropertyModule,
     TenantModule,
     UnitModule,
+    LandlordModule,
+    LeasedPropertiesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

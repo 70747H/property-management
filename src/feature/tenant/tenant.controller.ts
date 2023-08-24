@@ -11,16 +11,11 @@ import { TenantService } from './tenant.service';
 import { CreateTenantDto } from './dto/create-tenant.dto';
 import { UpdateTenantDto } from './dto/update-tenant.dto';
 import { ApiTags } from '@nestjs/swagger';
-import { LeasedPropertiesService } from './leased-properties.service';
-import { CreateLeasedPropertiesDto } from './dto/create-lease-properties.dto';
 
 @ApiTags('Tenant')
 @Controller('tenant')
 export class TenantController {
-  constructor(
-    private readonly tenantService: TenantService,
-    private readonly leasedPropertiesService: LeasedPropertiesService,
-  ) {}
+  constructor(private readonly tenantService: TenantService) {}
 
   @Post()
   create(@Body() createTenantDto: CreateTenantDto) {
@@ -45,10 +40,5 @@ export class TenantController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.tenantService.remove(+id);
-  }
-
-  @Post('lease')
-  leaseProperty(@Body() createLeasedPropertiesDto: CreateLeasedPropertiesDto) {
-    return this.leasedPropertiesService.lease(createLeasedPropertiesDto);
   }
 }

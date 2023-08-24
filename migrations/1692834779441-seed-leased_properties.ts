@@ -1,4 +1,4 @@
-import { LeasedProperties } from '../src/feature/tenant/entities/leased-properties.entity';
+import { LeasedProperties } from '../src/feature/leased_properties/entities/leased-properties.entity';
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class SeedLeasedProperties1692834779441 implements MigrationInterface {

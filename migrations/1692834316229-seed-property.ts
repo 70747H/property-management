@@ -1,7 +1,7 @@
 import { Point } from 'geojson';
 import { Property } from '../src/feature/property/entities/property.entity';
-import { MigrationInterface, QueryRunner } from 'typeorm';
 import { PropertyType } from '../src/feature/property/enum/unit-type.enum';
+import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class SeedProperty1692834316229 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
